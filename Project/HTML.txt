@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Универсальное появление и закрытие попапа</title>
+<style>
+    .popup {
+        display: none;
+        position: absolute;
+        top: 150px;
+        left: 87%;
+        transform: translateX(-50%);
+        width: 100px;
+        padding: 10px;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+    .close-btn {
+        float: left;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="report" onclick="showPopup('popup')"> 
+    <div class="dott"></div> 
+    <div class="dott"></div> 
+    <div class="dott"></div> 
+</div> 
+
+<div class="popup" id="popup"> 
+    <a href="#">Ссылка 1</a><br> 
+    <a href="#">Ссылка 2</a><br> 
+    <button class="close-btn" onclick="closePopup('popup')">✖</button> 
+</div> 
+
+<script>
+function showPopup(popupId) {
+    var popup = document.getElementById(popupId);
+    if (popup) {
+        popup.style.display = "block";
+    }
+}
+
+function closePopup(popupId) {
+    var popup = document.getElementById(popupId);
+    if (popup) {
+        popup.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
